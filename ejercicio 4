@@ -1,0 +1,153 @@
+int ledrojo = 13;
+int ledverde = 12;
+int ledazul = 10; 
+int ledmorado = 8;
+int dt = 100;
+
+
+void setup() {
+ pinMode(ledrojo,OUTPUT);
+ pinMode(ledverde,OUTPUT);
+ pinMode(ledazul,OUTPUT);
+ pinMode(ledmorado,OUTPUT);
+
+}
+
+void loop (){
+ /*000*/ 
+digitalWrite(ledrojo,LOW);
+delay(100);
+digitalWrite(ledverde,LOW);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+ /*001*/
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledrojo,LOW);
+delay(100);
+
+ /*010/*/
+digitalWrite(ledverde,LOW);
+delay(100);
+digitalWrite(ledverde,HIGH);
+delay(100);
+
+ /*0011*/
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledazul,HIGH);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+digitalWrite(ledmorado,HIGH);
+delay(100);
+
+ /*000*/
+digitalWrite(ledrojo,LOW);
+delay(100);
+digitalWrite(ledverde,LOW);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+ /*001*/
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledrojo,LOW);
+delay(100);
+
+ /*010*/
+digitalWrite(ledverde,LOW);
+delay(100);
+digitalWrite(ledverde,HIGH);
+delay(100);
+
+ /*011*/
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,HIGH);
+delay(100);
+
+ /*100*/
+digitalWrite(ledazul,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+
+ /*101*/
+digitalWrite(ledmorado,HIGH);
+delay(100);
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+digitalWrite(ledrojo,LOW);
+delay(100);
+
+ /*110*/
+digitalWrite(ledmorado,HIGH);
+delay(100);
+digitalWrite(ledazul,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+/*111*/
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledverde,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+/*100*/
+digitalWrite(ledverde,HIGH);
+delay(100);
+digitalWrite(ledverde,LOW);
+delay(100);
+
+/*101*/
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledmorado,HIGH);
+delay(100);
+digitalWrite(ledrojo,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+/*110*/
+digitalWrite(ledazul,HIGH);
+delay(100);
+digitalWrite(ledverde,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledverde,LOW);
+delay(100);
+
+/*111*/
+digitalWrite(ledrojo,HIGH);
+delay(100);
+digitalWrite(ledverde,HIGH);
+delay(100);
+digitalWrite(ledazul,LOW);
+delay(100);
+digitalWrite(ledmorado,LOW);
+delay(100);
+
+}
