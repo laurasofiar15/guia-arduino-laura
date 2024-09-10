@@ -1,0 +1,17 @@
+int ledPin = 13;
+int intensidad1 = 0;
+int intensidad2 = 100;
+int intensidad3 = 225;
+int dt = 500;
+
+void setup() {
+pinMode (ledPin,OUTPUT);
+}
+
+void loop() {
+analogWrite (ledPin,intensidad1);
+delay(dt);
+analogWrite (ledPin,intensidad2);
+delay(dt);
+analogWrite (ledPin,intensidad3);
+delay(dt);
