@@ -1,0 +1,18 @@
+int ledPin=8;
+int dt=500;
+
+void setup() {
+pinMode(ledPin,OUTPUT);
+ 
+}
+
+void loop() {
+  analogRead(ledPin);
+ if(ledPin);
+  digitalWrite(ledPin,HIGH);
+  delay(dt);
+else
+ digitalWrite(ledPin,LOW);
+ delay(dt);
+
+}
