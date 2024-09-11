@@ -1,0 +1,69 @@
+int ledrojo= 13;
+int ledverde=12;
+int ledamarillo=11;
+int ledmorado=10;
+int ledrosado=9;
+int lednaranja=8;
+int ledazul=7;
+int dt= 200;
+int i=0;
+
+void setup (){
+ pinMode(ledrojo,OUTPUT);
+ pinMode(ledverde,OUTPUT);
+ pinMode(ledamarillo,OUTPUT);
+ pinMode(ledmorado,OUTPUT);
+ pinMode(ledrosado,OUTPUT);
+ pinMode(lednaranja,OUTPUT);
+ pinMode(ledazul,OUTPUT);
+
+}
+
+void loop (){
+for (i=0; i<7; i++){
+digitalWrite(ledrojo,HIGH);
+delay(200);
+digitalWrite(ledrojo,LOW);
+
+  
+}
+for (i=0; i<6; i++){
+digitalWrite(ledverde,HIGH);
+delay(200);
+digitalWrite(ledverde,LOW);
+
+}
+
+for (i=0; i<5; i++){
+digitalWrite(ledamarillo,HIGH);
+delay(200);
+digitalWrite(ledamarillo,LOW);
+
+}
+for (i=0; i<4; i++){
+digitalWrite(ledmorado,HIGH);
+delay(200);
+digitalWrite(ledmorado,LOW);
+}
+
+for (i=0; i<3; i++){
+digitalWrite(ledrosado,HIGH);
+delay(200);
+digitalWrite(ledrosado,LOW);
+}
+
+for (i=0; i<2; i++){
+digitalWrite(lednaranja,HIGH);
+delay(200);
+digitalWrite(lednaranja,LOW);
+
+}
+
+for (i=0; i<1; i++){
+digitalWrite(ledazul,HIGH);
+delay(200);
+digitalWrite(ledazul,LOW);
+}
+
+    
+    }
