@@ -1,26 +1,24 @@
-#include <DHT.h>
 #include <LiquidCrystal.h>
+#include <DHT11.h>
 
-int DHTPIN 7;
-int DHTTYPE DHT11;
-int ventiladorPin=8; 
+int sensor =2;
+int temp, humedad ;
+int dt=500;
 
-void setup() {
-  lcd.begin(16,2);
-  dht.begin(11);
-  pinMode(ventiladorPin,OUTPUT);
-}
+ DHT11 (sensor,DHT11);
 
-void loop() {
-  float .readTemperature(11);
-  
-  lcd.setCursor(0, 0);
-  lcd.print("Temp");
-  lcd.print("C");
-  
-  if (t >=25) { 
-  digitalWrite(ventiladorPin,HIGH);
-  } else {
-  digitalWrite(ventiladorPin,LOW); 
-  delay(2000);
+ void setup(){
+  Serial.begin(9600);
+  dht11.begin ();
+
   }
+  void loop (){
+   humedad = dht11.readHumidity();
+   temp= dht11.readTemperature();
+    
+  }
+Serial.print ("Temperatura:");
+Serial.print(temp);
+Serial.print ("°C humedad:");
+Serial.print("%");
+delay(dt);
