@@ -1,0 +1,25 @@
+int pogPin = 9; 
+int pigPin = 10; 
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pigPin, OUTPUT);
+  pinMode(pogPin, INPUT);
+}
+
+void loop() {
+
+  digitalWrite(pigPin, LOW);
+  delay(2);
+  digitalWrite(pigPin, HIGH);
+  delay(10);
+  digitalWrite(pigPin, LOW);
+
+  pulseIn(pogPin, HIGH);
+  
+  Serial.print("distancia");
+  Serial.print("distancia");
+  Serial.println("cm");
+  delay(1000); 
+}
