@@ -1,0 +1,26 @@
+#include <DHT.h>
+#include <LiquidCrystal.h>
+
+int DHTPIN 7;
+int DHTTYPE DHT11;
+int ventiladorPin=8; 
+
+void setup() {
+  lcd.begin(16,2);
+  dht.begin(11);
+  pinMode(ventiladorPin,OUTPUT);
+}
+
+void loop() {
+  float .readTemperature(11);
+  
+  lcd.setCursor(0, 0);
+  lcd.print("Temp");
+  lcd.print("C");
+  
+  if (t >=25) { 
+  digitalWrite(ventiladorPin,HIGH);
+  } else {
+  digitalWrite(ventiladorPin,LOW); 
+  delay(2000);
+  }
