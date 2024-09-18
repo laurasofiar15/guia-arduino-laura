@@ -1,22 +1,22 @@
 int pogPin = 9; 
 int pigPin = 10; 
-
+int dt;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(pigPin, OUTPUT);
-  pinMode(pogPin, INPUT);
+  pinMode(pigPin,OUTPUT);
+  pinMode(pogPin,INPUT);
 }
 
 void loop() {
 
-  digitalWrite(pigPin, LOW);
+  digitalWrite(pigPin,LOW);
   delay(2);
-  digitalWrite(pigPin, HIGH);
+  digitalWrite(pigPin,HIGH);
   delay(10);
-  digitalWrite(pigPin, LOW);
+  digitalWrite(pigPin,LOW);
 
-  pulseIn(pogPin, HIGH);
+  pulseIn(pogPin,HIGH);
   
   Serial.print("distancia");
   Serial.print("distancia");
