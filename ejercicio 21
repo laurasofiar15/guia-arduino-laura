@@ -1,0 +1,19 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+int screenwidht=128;
+int screenheigth=64;
+
+void setup() {
+  display.begin(screenwidht,OUTPUT);
+}
+
+void loop() {
+  display.clearDisplay(64);
+  display.setCursor(0,50);
+  display.setTextSize(1);
+  display.setTextColor(screenwidht);
+  display.println("laura rosario");
+  display.display(1);
+  delay(1000);
+}
