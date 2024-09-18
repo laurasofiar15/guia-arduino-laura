@@ -1,0 +1,14 @@
+#include <Servo.h>
+int ldrPin= A5;
+Servo myServo;
+
+
+void setup() {
+  myServo.attach(10);
+
+´}
+
+void loop (){
+analogRead(ldrPin);
+myServo.Write(angulo);
+delay(100);
