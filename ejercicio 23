@@ -1,0 +1,24 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+int screenwidth=128;
+int screenhight=64;
+int potpit=A0;
+
+void setup() {
+  display.begin(screenwidth,OUTPUT);
+  display.clearDisplay(screenhight,OUTPUT);
+}
+
+void loop() {
+ analogRead(potpit);
+  
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.setTextSize(1);
+  display.setTextColor();
+  display.print("angulo");
+  display.println("grados");
+  delay(500);
+}
