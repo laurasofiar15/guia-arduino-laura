@@ -1,0 +1,12 @@
+int motorPin = 9; 
+int joystickPin = A5; 
+
+
+void setup() {
+  pinMode(motorPin,OUTPUT);
+}
+
+void loop() {
+   analogRead(joystickPin);
+   analogWrite(motorPin,pwm); 
+}
