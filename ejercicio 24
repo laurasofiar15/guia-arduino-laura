@@ -1,0 +1,29 @@
+#include<Servo.h>
+
+Servo myServorojo;
+Servo myServoverde;
+Servo myServoazul;
+Servo mySermorado;
+Servo myServoamarillo;
+int dt=200;
+
+void setup() {
+myServorojo.attach(3);
+myServoverde.attach(10);
+myServoazul.attach(12);
+myServomorado.attach(11);
+myServoamarillo.attach(9);
+}
+
+void loop() {
+myServorojo.write(100);
+delay (dt);
+myServoverde.write(90);
+delay(dt);
+myServoazul.write(80);
+delay (dt);
+myServomorado.write(60);
+delay (dt);
+myServamarillo.write(70);
+delay (dt);
+}
