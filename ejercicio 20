@@ -1,0 +1,19 @@
+#define MQ_PIN=A0; 
+#define BUZZER_PIN=9; 
+int umbral = 400;
+void setup() {
+  pinMode(BUZZER_PIN,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  analogRead(MQ_PIN);
+  Serial.println(valor);
+
+  void setup(){
+  if (valor>umbral) {
+    digitalWrite(BUZZER_PIN,HIGH);
+  } else {
+    digitalWrite(BUZZER_PIN,LOW); 
+  delay(1000);
+  }
