@@ -1,0 +1,19 @@
+int mqPin=A5; 
+int buzzerPin=9;
+int umbral=400;
+
+void setup() {
+  pinMode(buzzerPin,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  analogRead(mqPin);
+  Serial.println(valor);
+  
+  if (valor > umbral) {
+  digitalWrite(buzzerPin,HIGH); 
+  } else {
+  digitalWrite(buzzerPin,LOW); 
+  delay(1000);
+  }
