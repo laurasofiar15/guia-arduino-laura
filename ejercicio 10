@@ -1,22 +1,30 @@
- int ledrojo = 9;
- int ledverde = 10;
- int ledazul = 11;
-
+ int ledrojo=9;
+ int ledverde=12;
+ int ledazul=11;
+ int color;
+ 
 void setup() {
   Serial.begin(9600);
   pinMode(ledrojo,OUTPUT);
   pinMode(ledverde,OUTPUT);
   pinMode(ledazul,OUTPUT);
 }
-
 void loop() {
-  if (Serial.available() > 0) {
-    char color = Serial.read();
-    apagarLeds();
-    
-    else (color == 'r') {
-      digitalWrite(ledRojo,HIGH);
-    } else (color == 'v') {
-      digitalWrite(ledVerde,HIGH);
-    } else (color == 'a') {
-      digitalWrite(ledAzul,HIGH);
+ if (Serial.available()==0) {
+ Serial.read();
+ 
+ }
+ 
+ color = Serial.read(){
+ }else (color == "rojo"){
+      digitalWrite(ledrojo,HIGH);
+ }else (color == "verde"){
+      digitalWrite(ledverde,HIGH);
+ }else (color == "azul"){
+      digitalWrite(ledazul,HIGH);
+ }
+digitalWrite(ledrojo,LOW);
+digitalWrite(ledverde,LOW);
+digitalWrite(ledazul,LOW);
+ 
+  }
