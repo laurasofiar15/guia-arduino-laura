@@ -1,17 +1,17 @@
-int ledPin=9;
-int botonPin=2;
-int dt(200);
+const int LED=13;
+const int BOTON=7;
+int val;
 
-void setup() {
-  pinMode(ledPin,OUTPUT);
-  pinMode(botonPin,OUTPUT);
+void setup(){
+pinMode(LED,OUTPUT);
+pinMode(BOTON,INPUT);
 }
 
-void loop() {
-  if (digitalRead(botonPin,LOW);
-  delay(200);
-  digitalWrite(ledPin,HIGH);
-
-  while(digitalRead(botonPin,LOW);
-  delay(200);
+void loop(){
+val=digitalRead(BOTON);
+if  (val==HIGH){
+digitalWrite(LED,HIGH);
+}
+else { digitalWrite(LED,LOW);
+}
 }
