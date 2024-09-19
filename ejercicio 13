@@ -1,14 +1,23 @@
 int motorPin=9;
 int potenPin=A5;
-int dt(100);
+int potValue;
+int pwmValue;
+int valorPot;
 
 void setup (){
-  pinMode(motorPin,OUTPUT);
-  pinMode(potenPin,OUTPUT);
+ pinMode(motorPin,OUTPUT);
+ Serial.begin(9600);
+ 
 }
   void loop(){
-  analogWrite(motorPin,LOW);
-  delay(dt);
-  analogWrite(potenPin,HIGH);
-  delay(dt);
+potValue = analogRead(potenPin);
+pwmValue = (potValue,0,1023,0,225);
+
+analogWrite(motorPin,pwmValue);
+
+Serial.print("poten");
+Serial.print(valorPot);
+Serial.print("pwm:");
+Serial.print(pwmValue);
+delay(100);
   } 
