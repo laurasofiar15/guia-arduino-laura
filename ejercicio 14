@@ -1,12 +1,23 @@
-int motorPin = 9; 
-int joystickPin = A5; 
+int motorPin=9;
+int joystickPin=A5;
+int potValue;
+int pwmValue;
+int valorPot;
 
-
-void setup() {
-  pinMode(motorPin,OUTPUT);
+void setup (){
+ pinMode(motorPin,OUTPUT);
+ Serial.begin(9600);
+ 
 }
+  void loop(){
+potValue = analogRead(joystickPin);
+pwmValue = (potValue,0,1023,0,225);
 
-void loop() {
-   analogRead(joystickPin);
-   analogWrite(motorPin,pwm); 
-}
+analogWrite(motorPin,pwmValue);
+
+Serial.print("joystick");
+Serial.print(valorPot);
+Serial.print("pwm:");
+Serial.print(pwmValue);
+delay(100);
+  }
