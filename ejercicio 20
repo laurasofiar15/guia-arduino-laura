@@ -1,19 +1,24 @@
-#define MQ_PIN=A0; 
-#define BUZZER_PIN=9; 
-int umbral = 400;
+#define pin_sensor A0 
+#define pin_bocina 9     
+#define THRESHOLD 300      
+
 void setup() {
-  pinMode(BUZZER_PIN,OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(9600);   
+  pinMode(pin_bocina, OUTPUT); 
 }
 
 void loop() {
-  analogRead(MQ_PIN);
-  Serial.println(valor);
+  int nivelgas = analogRead(pin_sensor); 
+  Serial.print("Nivel de gas: ");
+  Serial.println(nivelgas); 
 
-  void setup(){
-  if (valor>umbral) {
-    digitalWrite(BUZZER_PIN,HIGH);
+  if (nivelgas > THRESHOLD) {
+    int speakerVolume = map(nivelgas, THRESHOLD, 1023, 0, 255); 
+    analogWrite(pin_bocina, speakerVolume); 
+    Serial.println("Alerta");
   } else {
-    digitalWrite(BUZZER_PIN,LOW); 
-  delay(1000);
+    analogWrite(pin_bocina, 0);
   }
+
+  delay(1000); 
+}
