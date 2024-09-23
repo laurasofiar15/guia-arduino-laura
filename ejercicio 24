@@ -1,29 +1,42 @@
-#include<Servo.h>
+#define RED_PIN   9
+#define GREEN_PIN 10
+#define BLUE_PIN  11
 
-Servo myServorojo;
-Servo myServoverde;
-Servo myServoazul;
-Servo mySermorado;
-Servo myServoamarillo;
-int dt=200;
+ 
+#define COLOR_CHANGE_DELAY 1000 
 
 void setup() {
-myServorojo.attach(3);
-myServoverde.attach(10);
-myServoazul.attach(12);
-myServomorado.attach(11);
-myServoamarillo.attach(9);
+  
+  pinMode(RED_PIN, OUTPUT);
+  pinMode(GREEN_PIN, OUTPUT);
+  pinMode(BLUE_PIN, OUTPUT);
 }
 
 void loop() {
-myServorojo.write(100);
-delay (dt);
-myServoverde.write(90);
-delay(dt);
-myServoazul.write(80);
-delay (dt);
-myServomorado.write(60);
-delay (dt);
-myServamarillo.write(70);
-delay (dt);
+  
+  setColor(255, 0, 0); 
+  delay(COLOR_CHANGE_DELAY);
+
+  
+  setColor(0, 255, 0); 
+  delay(COLOR_CHANGE_DELAY);
+
+
+  setColor(0, 0, 255); 
+  delay(COLOR_CHANGE_DELAY);
+
+  
+  setColor(255, 255, 0); 
+  delay(COLOR_CHANGE_DELAY);
+
+
+  setColor(255, 255, 255); 
+  delay(COLOR_CHANGE_DELAY);
+}
+
+
+void setColor(int red, int green, int blue) {
+  analogWrite(RED_PIN, red);
+  analogWrite(GREEN_PIN, green);
+  analogWrite(BLUE_PIN, blue);
 }
