@@ -1,19 +1,37 @@
 #include <Wire.h>
-#include <Adafruit_GFX.h>
+#include <Adafruit_GFX.h> 
 #include <Adafruit_SSD1306.h>
-int screenwidht=128;
-int screenheigth=64;
+
+#define ANCHO_PANTALLA 128 
+#define ALTO_PANTALLA 64 
+
+#define OLED_RESET     -1 
+#define DIRECCION_PANTALLA 0x3C 
+
+Adafruit_SSD1306 display(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, OLED_RESET);
+
+
 
 void setup() {
-  display.begin(screenwidht,OUTPUT);
+  Serial.begin(9600);
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, DIRECCION_PANTALLA)) {
+    Serial.println(F("Fallo en la asignacion de SSD1306"));
+  }
+
+
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(30,50);
+  display.println("Ana Maria");
+  display.display();
+     
+ 
+  display.display();
+ 
+
 }
 
 void loop() {
-  display.clearDisplay(64);
-  display.setCursor(0,50);
-  display.setTextSize(1);
-  display.setTextColor(screenwidht);
-  display.println("laura rosario");
-  display.display(1);
-  delay(1000);
 }
